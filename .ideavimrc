@@ -1,7 +1,5 @@
-" .ideavimrc is a configuration file for IdeaVim plugin. It uses
-"   the same commands as the original .vimrc configuration.
-" You can find a list of commands here: https://jb.gg/h38q75
-" Find more examples here: https://jb.gg/share-ideavimrc
+" Master for life!
+" I will never be a cuck and use main!
 
 " ===================================================================
 " Basic Settings
@@ -100,13 +98,13 @@ map <leader>gw :action Vcs.OpenRepositoryInBrowser<CR>
 " View Mappings (v) 
 " ===================================================================
 
-" View related actions
-map <leader>vg :action Vcs.OpenRepositoryInBrowser<CR>
-map <leader>vh :action Vcs.OpenRepositoryInBrowser<CR>
-map <leader>vr :action Vcs.OpenRepositoryInBrowser<CR>
+" View related actions - using command palette for GitHub actions
+map <leader>vg :action GotoAction<CR>github<CR>
+map <leader>vh :action GotoAction<CR>github<CR>
+map <leader>vr :action GotoAction<CR>github<CR>
 map <leader>vf :action RevealIn<CR>
 map <leader>vt :action Terminal.OpenInTerminal<CR>
-map <leader>vs :action Tool_External Tools_Open in VSCode<CR>
+map <leader>vs :action GotoAction<CR>vscode<CR>
 
 " ===================================================================
 " Trouble/Diagnostics Mappings (x)
@@ -178,9 +176,10 @@ map <leader>e :action ActivateProjectToolWindow<CR>
 
 " Tab navigation
 map <leader>bn :action NextTab<CR>
-map <leader>bp :action PreviousTab<CR>
+map <leader>bb :action PreviousTab<CR>
 map <leader>bd :action CloseContent<CR>
 map <leader>bo :action CloseAllEditorsButActive<CR>
+map <leader>c :action CloseContent<CR>
 
 " ===================================================================
 " Additional Useful Mappings
